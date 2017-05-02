@@ -4,7 +4,7 @@ An Ansible Role that installs Logstash on Debian/Ubuntu with systemd.
 
 ## Requirements
 
-Though other methods are possible, this role is made to work with Elasticsearch as a backend for storing log messages.
+Requires at least Java 7 (Java 8+ preferred). Install OpenJDK or Oracle JDK using any galaxy role.
 
 ## Role Variables
 
