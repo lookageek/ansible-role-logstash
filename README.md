@@ -14,7 +14,7 @@ Available variables are listed below, along with default values (see `defaults/m
 
 The elasticstack debian repo version
 
-    logstash_version: "5.3.2"
+    logstash_version: "1:5.3.2-1"
 
 Specific logstash version to install
 

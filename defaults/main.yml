@@ -9,7 +9,7 @@ logstash_ssl_certificate_file: ""
 logstash_ssl_key_file: ""
 
 elasticstack_deb_repo: "5.x"
-logstash_version: "5.3.2"
+logstash_version: "1:5.3.2-1"
 
 logstash_enabled_on_boot: yes
 
