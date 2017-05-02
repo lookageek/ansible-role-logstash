@@ -6,7 +6,7 @@
 
 - name: Add Logstash repository.
   apt_repository:
-    repo: 'deb http://packages.elasticsearch.org/logstash/2.3/debian stable main'
+    repo: "deb https://artifacts.elastic.co/packages/{{ elasticstack_deb_repo }}/apt stable main"
     state: present
 
 - name: Check if Logstash is already installed.
@@ -18,12 +18,16 @@
   when: logstash_installed.stat.exists == false
 
 - name: Install Logstash.
-  apt: pkg=logstash state=present
+  apt:
+    pkg: logstash={{ logstash_version }}
+    state: present
 
-- name: Add Logstash user to adm group (Debian).
+- name: Ensure logstash-web process is stopped and disabled.
+  service: name=logstash-web state=stopped enabled=no
+
+- name: Add Logstash user to adm group (Debian / Ubuntu).
   user:
     name: logstash
     group: logstash
     groups: adm
-  when: ansible_os_family == "Debian"
   notify: restart logstash

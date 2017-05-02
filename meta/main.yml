@@ -2,16 +2,12 @@
 dependencies: []
 
 galaxy_info:
-  author: geerlingguy
+  author: lookageek
   description: Logstash for Linux.
-  company: "Midwestern Mac, LLC"
+  company: "Caavo, Inc."
   license: "license (BSD, MIT)"
   min_ansible_version: 1.8
   platforms:
-    - name: EL
-      versions:
-      - 6
-      - 7
     - name: Debian
       versions:
       - all
