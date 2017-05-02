@@ -5,4 +5,8 @@
 - include: plugins.yml
 
 - name: Ensure Logstash is started and enabled on boot.
-  service: "name=logstash state=started enabled={{ logstash_enabled_on_boot }}"
+  systemd:
+    name: logstash
+    state: started
+    enabled: {{ logstash_enabled_on_boot }}
+    daemon_reload: yes

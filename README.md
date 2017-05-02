@@ -1,6 +1,6 @@
 # Ansible Role: Logstash
 
-An Ansible Role that installs Logstash on Debian/Ubuntu.
+An Ansible Role that installs Logstash on Debian/Ubuntu with systemd.
 
 ## Requirements
 

@@ -1,3 +1,5 @@
 ---
 - name: restart logstash
-  service: name=logstash state=restarted
+  systemd:
+    name: logstash
+    state: restarted
