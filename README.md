@@ -50,6 +50,10 @@ Set this to `no` if you don't want logstash to run on system startup.
 
 A list of Logstash plugins that should be installed.
 
+    logstash_queue_type: persisted
+
+Queue type of logstash. Available values `memory` and `persisted`
+
 ## License
 
 MIT / BSD
