@@ -17,3 +17,4 @@ logstash_install_plugins:
   - logstash-input-beats
 
 logstash_queue_type: persisted
+logstash_logging_level: info
