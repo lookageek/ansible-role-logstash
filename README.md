@@ -54,9 +54,9 @@ A list of Logstash plugins that should be installed.
 
 Queue type of logstash. Available values `memory` and `persisted`
 
-    logstash_logging_level: info
+    logstash_log_level: info
 
-Logging from logstash level. Available levels `trace`, `debug`, `info`, `warn`, `error`, and `fatal`.
+Logging for logstash level configuration. Available levels `trace`, `debug`, `info`, `warn`, `error`, and `fatal`.
 
 ## License
 
