@@ -16,5 +16,5 @@ logstash_enabled_on_boot: yes
 logstash_install_plugins:
   - logstash-input-beats
 
-logstash_queue_type: persisted
+logstash_queue_type: memory
 logstash_log_level: info
