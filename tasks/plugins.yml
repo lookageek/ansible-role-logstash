@@ -13,3 +13,9 @@
   with_items: "{{ logstash_install_plugins }}"
   when: "item not in logstash_plugins_list.stdout"
   notify: restart logstash
+
+- name: Install X-Pack.
+  become: true
+  command: /usr/share/logstash/bin/logstash-plugin install x-pack
+  when: logstash_xpack_enabled
+  notify: restart logstash

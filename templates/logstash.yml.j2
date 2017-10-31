@@ -159,3 +159,8 @@ path.logs: /var/log/logstash
 #
 # Where to find custom plugins
 # path.plugins: []
+#
+{% if logstash_xpack_enabled %}
+# X-Pack Settings
+xpack.monitoring.enabled: {{ logstash_xpack_monitoring_enabled }}
+{% end %}
