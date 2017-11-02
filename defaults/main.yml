@@ -20,4 +20,4 @@ logstash_queue_type: memory
 logstash_log_level: info
 
 logstash_xpack_enabled: true
-logstash_xpack_monitoring_enabled: true
+logstash_xpack_monitoring_enabled: "true"

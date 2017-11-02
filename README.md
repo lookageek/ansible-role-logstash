@@ -59,7 +59,7 @@ Queue type of logstash. Available values `memory` and `persisted`
 Logging for logstash level configuration. Available levels `trace`, `debug`, `info`, `warn`, `error`, and `fatal`.
 
     logstash_xpack_enabled: true
-    logstash_xpack_monitoring_enabled: true
+    logstash_xpack_monitoring_enabled: "true"
 
 X-Pack configuration for Logstash.
 
