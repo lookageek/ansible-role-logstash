@@ -1,0 +1,23 @@
+---
+- name: Add Elasticsearch apt key.
+  apt_key:
+    url: http://packages.elasticsearch.org/GPG-KEY-elasticsearch
+    state: present
+
+- name: Add Logstash repository.
+  apt_repository:
+    repo: "deb https://artifacts.elastic.co/packages/{{ elasticstack_deb_repo }}/apt stable main"
+    state: present
+    update_cache: yes
+
+- name: Install Logstash.
+  apt:
+    pkg: logstash={{ logstash_version }}
+    state: present
+
+- name: Add Logstash user to adm group (Debian / Ubuntu).
+  user:
+    name: logstash
+    group: logstash
+    groups: adm
+  notify: restart logstash
