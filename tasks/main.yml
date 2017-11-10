@@ -1,8 +1,8 @@
 ---
-- include: setup.yml
-- include: config.yml
-- include: ssl.yml
-- include: plugins.yml
+- import_tasks: setup.yml
+- import_tasks: config.yml
+- import_tasks: ssl.yml
+- import_tasks: plugins.yml
 
 - name: Ensure Logstash is started and enabled on boot.
   systemd:
